@@ -1,0 +1,55 @@
+.campaign-filter, .campaign-deskripsi, .automation-filter, .section{
+    background: #eee;
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+
+.table-striped tbody tr:nth-of-type(odd){
+    background-color: rgba(0,0,0,.03) !important;
+}
+
+.table thead th{
+    color: #19A7CE;
+    font-weight: 600;
+}
+
+.campaign-deskripsi textarea{
+    background: white;
+    padding: 10px;
+}
+
+.template-pesan-preview{
+    margin-top: 5px;
+    color: #8F43EE;
+}
+
+#tokens span{
+    background: #2B3467;
+    color: white;
+    padding: 3px 6px;
+    margin-bottom: 4px;
+    display: inline-block;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.datatable-col-actions{
+    min-width: 180px;
+}
+
+.preview{
+    max-width: 100px;
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.btn-remove-media{
+    margin-top: 3px;
+}
+
+#table-link-conversion thead th{
+    background-color: transparent;
+    border: none;
+}

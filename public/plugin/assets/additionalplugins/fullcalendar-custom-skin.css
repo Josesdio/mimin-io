@@ -1,0 +1,137 @@
+@import url(fontawesome-5.10.1/css/all.min.css);
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap');
+
+
+.calendardisplay {
+  font-family: 'Roboto', sans-serif;
+}
+
+.calendardisplay .fc-center h2 {
+  font-size: 18px;
+  line-height: 48px;
+  color: #242A33;
+  text-transform: capitalize;
+}
+
+.calendardisplay .fc-button {
+  background: transparent;
+  border: none;
+  color: #BFBA9C;
+  line-height: 48px;
+  width: 48px;
+  height: 48px;
+  padding: 0;
+}
+
+.fc table {
+  border-collapse: separate;
+}
+
+.fc-toolbar.fc-header-toolbar {
+  padding-top: 0;
+  margin-bottom: 0;
+}
+
+.fc-row .fc-content-skeleton {
+  padding-bottom: 0;
+}
+
+.calendardisplay .fc-button span {
+  color: #BFBA9C;
+  font-size: 32px;
+}
+
+.calendardisplay .fc-button:hover {
+  background: transparent;
+  color: #59c3c3;
+}
+
+.calendardisplay .fc-button:hover span {
+  color: #59c3c3;
+}
+
+.calendardisplay td {
+  border: solid 1px #F0EDE4 !important;
+}
+
+.calendardisplay td.fc-widget-content {
+  border: none !important;
+}
+
+.calendardisplay thead,
+.calendardisplay .fc-row,
+td.fc-head-container.fc-widget-header {
+  border: none !important;
+}
+
+.calendardisplay .fc th.fc-widget-header {
+  color: #000000;
+  background-color: #fcfbf8;
+  border: none;
+  line-height: 40px;
+  padding: 0;
+}
+
+.calendardisplay .fc-other-month {
+  opacity: .6;
+}
+
+.calendardisplay .fc-ltr .fc-dayGrid-view .fc-day-top .fc-day-number {
+  font-size: 24px;
+  float: none;
+  display: block;
+  line-height: 40px;
+  padding-top: 10px;
+}
+
+.calendardisplay .fc-day-top {
+  color: #000000;
+  height: 100px;
+  padding: 0;
+  text-align: center;
+}
+
+.calendardisplay .fc .fc-row .fc-content-skeleton td {
+  border: 0 !important;
+}
+
+.calendardisplay .fc .fc-row .fc-content-skeleton td.fc-day-top {
+  background-color: #F2EFEA;
+  border: solid 1px #F0EDE4 !important;
+}
+
+.calendardisplay .fc-day-top.fc-today {
+  color: #000000;
+  background-color: #FFFFFF !important;
+  border: solid 1px #F0EDE4 !important;
+}
+
+.calendardisplay .fc-day-top:hover {
+  color: #c44536 !important;
+  background-color: #FFFFFF !important;
+  border: solid 1px #c44536 !important;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.calendardisplay .fc-highlight-skeleton {
+  z-index: 6;
+  pointer-events : none;
+}
+
+.calendardisplay .fc-highlight-skeleton td {
+  background-color: transparent !important;
+  border: none !important;
+  opacity: 0;
+  box-sizing: border-box;
+}
+
+.calendardisplay .fc-highlight-skeleton .fc-highlight {
+  background-color: transparent !important;
+  border: solid 2px #c44536 !important;
+  opacity: 1;
+}
+
+.calendardisplay .fc-scroller.fc-day-grid-container {
+  min-height: 660px;
+}
