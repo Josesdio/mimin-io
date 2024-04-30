@@ -232,9 +232,9 @@
     height : 100%;
     padding-bottom: 0px;
     padding-top:15px ;
-    text-align: center;
-  }
-  
+    text-align: center;  
+}
+
 .register-box-body {
     border-radius: 0 0 20px 20px;
     background: rgb(255, 255, 255);
@@ -279,13 +279,13 @@
 
 @media (max-width: 991px) {
     .register-box {
-      width: fit-content;
+    width: fit-content;
     }
     .register-box-body {
         padding-left: 10px;
         padding-right: 10px;
         padding-bottom: 10px;
-      }
+    }
     .formstyle{
         padding-left: 10px;
         padding-right: 10px;

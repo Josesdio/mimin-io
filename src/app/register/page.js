@@ -16,15 +16,18 @@ const Register = () => {
     phone: '',
     referral: ''
   });
-  const handleNameChange = (e) => {
-    const newName = e.target.value;
-    setFormData({ ...formData, name: newName });
-  };
+
   const handleEmailChange = (e) => {
     const newEmail = e.target.value;
     setFormData({ ...formData, email: newEmail });
   };
   
+  const handleNameChange = (e) => {
+    const newName = e.target.value;
+    setFormData({ ...formData, name: newName });
+  };
+  
+
   // Fungsi untuk menangani perubahan nilai pada input nomor telepon
   const handlePhoneChange = (e) => {
     const newPhone = e.target.value;
@@ -243,7 +246,6 @@ const handlePreviousClick = () => {
     step: function (now) {
       // for making fielset appear animation
       opacity = 1 - now;
-
       current_fs.css({
           'display': 'none',
           'position': 'relative'
@@ -338,14 +340,14 @@ const togglePassword = () => {
                 className={styles.center}
               />
             </a>
-            <h3 className={`${styles['font-size-18']} ${styles['pb-5']}`}>
+            <h3 className={`${styles['font-size-18']} pb-5`}>
               <b className={`font-weight-600 ${styles['color-cyan']}`}>Daftar</b> sebagai
               member baru
             </h3>
           </div>
           <div className={styles['register-box-body']}>
             <form id={styles.msform} className={styles['form-element']}>
-              <ul id={styles.progressbar} className={styles['pb-5']}>
+              <ul id={styles.progressbar} className='pb-5'>
                 <li className={styles.active} id={styles.satu}>
                   <strong>Step 1</strong>
                 </li>
@@ -413,16 +415,16 @@ const togglePassword = () => {
                       onChange={handlePhoneChange}
                       />
                     </div>
-                    <div className={`row-md-6 ${styles['text-center']}`}>
+                    <div className='row-md-6 '> 
                       <div className={styles['text-link']}>
-                        <label className={styles['pl-25']} htmlFor="basic_checkbox_1" style={{ fontSize: "70%" }}>
+                        <label className='pl-25' htmlFor="basic_checkbox_1" style={{ fontSize: "70%" }}>
                           {" "}
                           Dengan mendaftar, Anda menyetujui
                           <a
                             className={`${styles['text-link']} ${styles['color-cyan']}`}
                             href="https://www.mimin.io/utility-pages/terms-conditions"
                           >
-                            <b> Ketentuan &amp; Kebijakan Privasi</b>
+                            <b> Ketentuan & Kebijakan Privasi</b>
                           </a>{" "}
                           kami.
                         </label>
@@ -432,7 +434,7 @@ const togglePassword = () => {
                   <input
                     type="button"
                     name="next"
-                    className={`next ${styles['action-button']} ${styles['pt-1']}`}
+                    className={`next ${styles['action-button']} pt-1`}
                     defaultValue="LANJUT"
                     data-id={1}
                     title="Lanjut"
