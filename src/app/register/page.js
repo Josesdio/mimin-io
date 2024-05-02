@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import bstyles from '/Users/josesdio/wish-good/mimin-io/public/plugin/assets/custom_style.css'
-import ionstyle from '/Users/josesdio/next-html/next-html/public/plugin/minimallite/assets/vendor_components/Ionicons/css/ionicons.css'
+import bstyles from '../../../public/plugin/assets/custom_style.css'
+import ionstyle from '/public/plugin/minimallite/assets/vendor_components/Ionicons/css/ionicons.css'
 import { useEffect, useState } from "react";
 import $ from "jquery";
 import Swal from "sweetalert2";
@@ -54,14 +54,11 @@ const Register = () => {
         },
         body: JSON.stringify({ name, email, phone, referral })
       });
-
       if (!response.ok) {
         throw new Error('Gagal mendaftar');
       }
-
       const data = await response.json();
       console.log('Response: ', data);
-
       // Kirim permintaan OTP ke email
       const otpResponse = await fetch(`https://liveapi.mimin.io/api/v1/auth/otp-email/${data.token}`, {
         method: 'GET',
@@ -69,28 +66,22 @@ const Register = () => {
           'Content-Type': 'application/json; charset=UTF-8'
         }
       });
-
       if (!otpResponse.ok) {
         throw new Error('Gagal mengirimkan OTP ke email');
       }
-
       const otpData = await otpResponse.json();
       console.log('OTP Response: ', otpData);
-
       // Update langkah saat ini
       setCurrentStep(currentStep + 1);
     } catch (error) {
       console.error('Error:', error);
       alert('Gagal mendaftar, coba lagi nanti');
     }
-
     console.log('dah klik!!!!');
-
     // Animasi perpindahan langkah
     let current_fs = $(element).parent();
     let next_fs = $(element).parent().next();
     let id = $(element).data('id');
-
     if (id === 1) {
       $('.form-input').each(function () {
         if ($(this).val() === '') {
@@ -109,7 +100,6 @@ const Register = () => {
           }
         }
       });
-
       if (!$('.error_message').is(':visible')) {
         Swal.fire({
           title: 'Memeriksa...',
@@ -118,21 +108,18 @@ const Register = () => {
           showConfirmButton: false,
           allowOutsideClick: false,
         });
-
         let datas = {
           name: $('#name').val(),
           email: $('#email').val(),
           phone: $('#phone').val(),
           referral: ''
         };
-
         
         
       }
     } else if (id === 2) {
       let otpType = $("input[name='radiobtn']:checked").val();
       let token = $("#button-otp").data('token');
-
       if (otpType === 'email') {
         Swal.fire({
           title: 'Memeriksa...',

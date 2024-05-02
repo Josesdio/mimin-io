@@ -1,70 +1,67 @@
 import Image from "next/image";
-import styles from "/public/plugin/assets/custom_style.css";
-import masterStyle from '/public/plugin/minimallite/minimallite-admin-main/css/master_style.css'
-import bootstyle from '/public/plugin/assets/bootstrap-4.3.1/css/bootstrap-grid.css'
-import bootstrap from '/public/plugin/assets/bootstrap-4.3.1/css/bootstrap.css'
-import extendStyle from '/public/plugin/minimallite/assets/vendor_components/bootstrap/dist/css/bootstrap-extend.css'
+import style from './page.module.css';
 export default function Home() {
 return (
     <>
 <body style={{background: 'url(plugin/assets/images/backgrounds/1.jpg) center center'}}>
-<div className="row d-flex align-items-center">
-    <div className="col-lg-6 pr-0 d-sm-block d-md-block d-lg-block">
-    <div className="d-flex flex-column">
-        <div className="loginannounce-left">
-        <div className= "login-box">
-            <div className="login-logo">
+<div className={`${style.row} ${style['h-100']} ${style['d-flex']} ${style['align-items-center']}`}>
+<div className={`${style['col-lg-6']} ${style['pr-0']} ${style['d-sm-block']} ${style['d-md-block']} ${style['d-lg-block']}`}>
+    <div className={`${style['d-flex']} ${style['flex-column']}`}>
+    <div className={style['loginannounce-left']}>
+        <div className={`${style['login-box']}`}>
+        <div className={style['login-logo']}>
             <a href="#">
-                <img
+            <img
                 src="plugin/placeholders/companylogos/companylogo.png"
                 alt="Mimin"
                 width="250px"
-                />
+            />
             </a>
-            </div>
-            {/* /.login-logo */}
-            <div className="login-box-header px-20 pt-20 pb-10 text-center">
-            <h3 className= 'font-size-18'>
-                <b className="color-cyan font-weight-600">Masuk</b> ke akun Anda
+        </div>
+          {/* /.login-logo */}
+        <div className={`${style['login-box-header']} ${style['px-20']} ${style['pt-20']} ${style['pb-10']} ${style['text-center']}`}>
+            <h3 className={style['font-size-18']}>
+            <b className={`${style['color-cyan']} ${style['font-weight-600']}`}>Masuk</b> ke akun Anda
             </h3>
-            </div>
-            {/* /.login-box-header */}
-            <div className="login-box-body shadow-none">
+        </div>
+          {/* /.login-box-header */}
+        <div className={`${style['login-box-body']} ${style['shadow-none']}`}>
             <form
-                id="login-form"
-                className='form-element'
-                method="POST"
-                action="/login"
+            id="login-form"
+            className={`${style['form-element']}`}
+            method="POST"
+            action="/login'"
             >
-                <div className="form-group has-feedback">
+            
+            <div className={`form-group has-feedback`}>
                 <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    className="form-control"
-                    placeholder="Email"
-                    required
-                    defaultValue=""
+                type="email"
+                name="email"
+                id="email"
+                className={`${style['form-control']}`}
+                placeholder="Email"
+                required=""
+                defaultValue="email"
                 />
-                <span className="ion ion-email form-control-feedback"/>
-                <span className="invalid-feedback" role="alert">
-                    <strong>silahkan cek email</strong>
+                <span className={`ion ion-email ${style['form-control-feedback']}`} />
+                <span className={style['invalid-feedback']} role="alert">
+                <strong>silahkan cek email</strong>
                 </span>
-                </div>
-                <div className="form-group has-feedback">
+            </div>
+            <div className={`form-group has-feedback`}>
                 <input
-                    type="password"
-                    name="password"
-                    id="password"
-                    className="form-control"
-                    placeholder="Kata sandi"
-                    required
-                    defaultValue=""
+                type="password"
+                name="password"
+                id="password"
+                className={style['form-control']}
+                placeholder="Kata sandi"
+                required=""
+                defaultValue="password"
                 />
                 <span
-                    className="ion ion-eye toggle-password"
-                    toggle="#password"
-                    style={{
+                className="ion ion-eye toggle-password"
+                toggle="#password"
+                style={{
                     cursor: "pointer",
                     position: "absolute",
                     bottom: 5,
@@ -72,113 +69,114 @@ return (
                     width: 34,
                     height: 24,
                     textAlign: "center"
-                    }}
+                }}
                 />
                 <span
-                    className='form-control-feedback'
-                    style={{ display: "none" }}
+                className={style['form-control-feedback']}
+                style={{ display: "none" }}
                 />
-                <span className="invalid-feedback" role="alert">
-                    <strong>silahkan cek kata sandi</strong>
+                <span className={style['invalid-feedback']} role="alert">
+                <strong>silahkan cek kata sandi</strong>
                 </span>
-                </div>
-                <div className='row'>
-                <div className='col-6'>
-                    <div className="checkbox text-link">
+            </div>
+            <div className={style.row}>
+                <div className={style['col-6']}>
+                <div className={`${style.checkbox} ${style['text-link']}`}>
                     <input type="checkbox" id="basic_checkbox_1" />
-                    <label className="pl-25" htmlFor="basic_checkbox_1">
-                        Tetap masuk
+                    <label className={style['pl-25']} htmlFor="basic_checkbox_1">
+                    Tetap masuk
                     </label>
-                    </div>
                 </div>
-                  {/* /.col */}
-                <div className='col-6'>
-                    <div className="fog-pwd text-right">
+                </div>
+                {/* /.col */}
+                <div className={style['col-6']}>
+                <div className={`${style['fog-pwd']} ${style['text-right']}`}>
                     <a
-                        href="/forgotPassword"
-                        className="text-link"
+                    href="/forgetPassword"
+                    className={style['text-link']}
                     >
-                        <i className="ion ion-locked pr-1" />
-                        Lupa kata sandi?
+                    <i className={`ion ion-locked ${style['pr-1']}`} />
+                    Lupa kata sandi?
                     </a>
                     <br />
-                    </div>
                 </div>
-                  {/* /.col */}
-                <div className="col-12 text-center">
-                    <button
+                </div>
+                {/* /.col */}
+                <div className={`${style['col-12']} ${style['text-center']}`}>
+                <button
                     type="submit"
                     id="login"
-                    className="btn btn-cyan btn-block margin-top-10"
+                    className={`${style.btn} ${style['btn-cyan']} ${style['btn-block']} ${style['margin-top-10']}`}
                     title="Login"
-                    >
+                >
                     LOGIN
-                    </button>
+                </button>
                 </div>
-                  {/* /.col */}
-                </div>
+                {/* /.col */}
+            </div>
             </form>
-              {/* /.social-auth-links */}
-            <div className="margin-top-30 text-center">
-                <p>
+            {/* /.social-auth-links */}
+            <div className={`${style['margin-top-30']} ${style['text-center']}`}>
+            <p>
                 Belum punya akun?{" "}
                 <a
-                    href="/register"
-                    className="text-link color-primary-red m-l-5"
+                href="/register"
+                className={`${style['text-link']} ${style['color-primary-red']} m-l-5`}
                 >
-                    Daftar
+                Daftar
                 </a>
-                </p>
-            </div>
-            </div>
-        </div>
-          {/* /.login-box-body */}
-        </div>
-    </div>
-    </div>
-    <div className="col-lg-6 pl-0">
-    <div className="loginannounce-right">
-        <div
-        id="carouselExampleIndicators"
-        className="carousel slide"
-        data-ride="carousel"
-        >
-        <ol className="carousel-indicators align-text-buttom">
-            <li
-            data-target="#carouselExampleIndicators"
-            data-slide-to={0}
-            className="active"
-            />
-            <li data-target="#carouselExampleIndicators" data-slide-to={1} />
-            <li data-target="#carouselExampleIndicators" data-slide-to={2} />
-        </ol>
-        <div className='carousel-inner'>
-            <div className="carousel-item active">
-            <img
-                className="d-block w-100"
-                src="plugin/assets/images/image-placeholders/background.jpg"
-                alt="First slide"
-            />
-            </div>
-            <div className='carousel-item'>
-            <img
-                className="d-block w-100"
-                src="plugin/assets/images/image-placeholders/background2.jpg"
-                alt="Second slide"
-            />
-            </div>
-            <div className='carousel-item'>
-            <img
-                className="d-block w-100"
-                src="plugin/assets/images/image-placeholders/background3.jpg"
-                alt="Third slide"
-            />
+            </p>
             </div>
         </div>
         </div>
+        {/* /.login-box-body */}
     </div>
     </div>
 </div>
+<div className={`${style['col-lg-6']} ${style['pl-0']}`}>
+    <div className={`${style['loginannounce-right']}`}>
+    <div
+        id="carouselExampleIndicators"
+        className={`${style['carousel']} slide`}
+        data-ride="carousel"
+    >
+        <ol className={`${style['carousel-indicators']} ${style['align-text-bottom']}`}>
+        <li
+            data-target="#carouselExampleIndicators"
+            data-slide-to={0}
+            className={style.active}
+        />
+        <li data-target="#carouselExampleIndicators" data-slide-to={1} />
+        <li data-target="#carouselExampleIndicators" data-slide-to={2} />
+        </ol>
+        <div className={style['carousel-inner']}>
+        <div className={`${style['carousel-item']} ${style.active}`}>
+            <img
+            className={`${style['d-block']} ${style['w-100']}`}
+            src="plugin/assets/images/image-placeholders/background.jpg"
+            alt="First slide"
+            />
+        </div>
+        <div className={style['carousel-item']}>
+            <img
+            className={`${style['d-block']} ${style['w-100']}`}
+            src="plugin/assets/images/image-placeholders/background2.jpg"
+            alt="Second slide"
+            />
+        </div>
+        <div className={`${style['carousel-item']}`}>
+            <img
+                className={`${style['d-block']} ${style['w-100']}`}
+                src="plugin/assets/images/image-placeholders/background3.jpg"
+                alt="Third slide"
+            />
+    </div>
+        </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </>
 
