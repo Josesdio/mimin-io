@@ -67,6 +67,12 @@
     padding-left: 15px;
 }
 
+.col-lg-6 {
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
 .d-sm-block {
     display: block !important;
 }
@@ -271,7 +277,6 @@
     color: #67757c;
     min-height: 38px;
     display: initial;
-    -webkit-background-clip: padding-box;
     background-color: transparent;
     background-position: center bottom, center calc(100% - 1px);
     background-repeat: no-repeat;

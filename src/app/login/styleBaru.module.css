@@ -1,27 +1,3 @@
-@import url(../assets/additionalplugins/fontawesome-5.10.1/css/all.min.css);
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
-
-/* Custom Colours
-
-$Primary Blue: #2a4978;
-$Primary Red: #e3170a;
-$Primary Beige: #dbd5b2;
-$Primary Paper: #f2efea;
-$Primary Orange: #fc7753;
-$Secondary Dark Red: #c44536;
-$Secondary Purple: #643a71;
-$Secondary Green: #4daa57;
-$Secondary Cyan: #59c3c3;
-$Secondary Soft Green: #7daf9c;
-$Additional Paper: #f8f7f4;
-$Additional Dark Blue Alt: #143866;
-$Additional Black: #242a33;
-$Additional Dark Beige: #bfba9c;
-$Additional Brown: #6e6841;
-$Additional Light Brown: #b9b287;
-$Additional Dark Brown: #474328;
-
-*/
 
 
 .color-primary-blue {
@@ -460,14 +436,6 @@ $Additional Dark Brown: #474328;
   border-color: #bfba9c;
   background-color: #f2efea;
 }
-
-/* ADDITIONAL CSS */
-/* @media (max-width: 767px) {
-  body,
-  html {
-    font-size: 17px !important;
-  }
-} */
 
 .text-link:hover {
   opacity: 0.7;
@@ -1034,11 +1002,6 @@ textarea.no-label::placeholder,
 }
 
 /* Login Page Stuff */
-
-.login-page {
-  background: url(images/backgrounds/4.jpg) center center no-repeat #d2d6de;
-  
-}
 
 .login-box-header,
 .register-box-header {

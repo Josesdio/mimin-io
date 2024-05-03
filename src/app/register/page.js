@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import bstyles from '../../../public/plugin/assets/custom_style.css'
-import ionstyle from '/public/plugin/minimallite/assets/vendor_components/Ionicons/css/ionicons.css'
+import ionstyle from '../../../public/plugin/minimallite/assets/vendor_components/Ionicons/css/ionicons.css'
 import { useEffect, useState } from "react";
 import $ from "jquery";
 import Swal from "sweetalert2";
@@ -482,7 +481,7 @@ const togglePassword = () => {
                     </div>
                     <div className="row-md-6">
                       <input
-                        className={`${bstyles['form-control']} datainput`}
+                        className={`${styles['form-control']} datainput`}
                         type="text"
                         name="otp"
                         id="otp"
@@ -541,9 +540,9 @@ const togglePassword = () => {
                       </label>
                     </div>
                     <div className="row-6">
-                      <div className={bstyles['form-group']}>
+                      <div className={styles['form-group']}>
                         <input
-                          className={`${bstyles['form-control']} datainput`}
+                          className={`${styles['form-control']} datainput`}
                           type="password"
                           name="password"
                           id="password"
@@ -564,7 +563,7 @@ const togglePassword = () => {
                           }}
                         />
                         <span
-                          className={bstyles['form-control-feedback']}
+                          className={styles['form-control-feedback']}
                           style={{ display: "none" }}
                         />
                         <span className={styles['invalid-feedback']} role="alert">
@@ -573,9 +572,9 @@ const togglePassword = () => {
                       </div>
                     </div>
                     <div className="row-6">
-                      <div className={bstyles['form-group']}>
+                      <div className={styles['form-group']}>
                         <input
-                          className={`${bstyles['form-control']} datainput`}
+                          className={`${styles['form-control']} datainput`}
                           type="password"
                           name="passwordConfirm"
                           id="passwordConfirm"
@@ -596,7 +595,7 @@ const togglePassword = () => {
                           }}
                         />
                         <span
-                          className={bstyles['form-control-feedback']}
+                          className={styles['form-control-feedback']}
                           style={{ display: "none" }}
                         />
                         <span className={styles['invalid-feedback']} role="alert">
@@ -646,7 +645,7 @@ const togglePassword = () => {
                       />
                     </div>
                     <div className="row-md-6">
-                      <div className={bstyles["form-group"]}>
+                      <div className={styles["form-group"]}>
                         <span
                           id="required-storeName"
                           className="error_message"
@@ -659,7 +658,7 @@ const togglePassword = () => {
                           *Harap diisi !
                         </span>
                         <input
-                          className={`${bstyles['form-control']} datainput`}
+                          className={`${styles['form-control']} datainput`}
                           type="text"
                           name="storeName"
                           id="storeName"
